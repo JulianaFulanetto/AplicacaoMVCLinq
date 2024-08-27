@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AplicacaoMVCLinq.Models.Cliente>
+
+<h1>Listar Clientes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!--Laço de repetição foreach para listar todos o elementos da lista de cliente-->
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.ClienteId</td>
+                <td>@cliente.Nome</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.Telefone</td>
+                <td>@cliente.DataNasc</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
